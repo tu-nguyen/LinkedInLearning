@@ -6,7 +6,7 @@ function secondFunction() {
     thirdFunction();
 }
 function thirdFunction() {
-    fourthfunction();
+    fourthFunction();
 }
 function fourthFunction() {
     headline.innerHTML = "You clicked the headline!";
@@ -15,7 +15,7 @@ function fourthFunction() {
 // grab the headline element
 var headline = document.getElementById("mainHeading");
 // add a click event handler
-headline.onclick = function() {
+headline.onclick = function () {
     firstFunction();
 };
 

@@ -1,8 +1,8 @@
-var myArray = [500,500,500,500,500];
+var myArray = [500, 500, 500, 500, 500, 42, 0];
 
 var total = 0;
 
-for ( var i = 0 ; i < myArray.length ; i++ ) {
+for (var i = 0; i < myArray.length; i++) {
     // add the current element to the total	
     total = total + myArray[i];
 }
