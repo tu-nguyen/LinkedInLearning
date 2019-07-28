@@ -4,7 +4,7 @@ const originText = document.querySelector("#origin-text p").innerHTML;
 const resetButton = document.querySelector("#reset");
 const theTimer = document.querySelector(".timer");
 
-var timer = [0,0,0,0];
+var timer = [0, 0, 0, 0];
 var interval;
 var timerRunning = false;
 
@@ -22,15 +22,15 @@ function runTimer() {
     theTimer.innerHTML = currentTime;
     timer[3]++;
 
-    timer[0] = Math.floor((timer[3]/100)/60);
-    timer[1] = Math.floor((timer[3]/100) - (timer[0] * 60));
+    timer[0] = Math.floor((timer[3] / 100) / 60);
+    timer[1] = Math.floor((timer[3] / 100) - (timer[0] * 60));
     timer[2] = Math.floor(timer[3] - (timer[1] * 100) - (timer[0] * 6000));
 }
 
 // Match the text entered with the provided text on the page:
 function spellCheck() {
     let textEntered = testArea.value;
-    let originTextMatch = originText.substring(0,textEntered.length);
+    let originTextMatch = originText.substring(0, textEntered.length);
 
     if (textEntered == originText) {
         clearInterval(interval);
@@ -57,7 +57,15 @@ function start() {
 
 // Reset everything:
 function reset() {
-    console.log("reset button has been pressed!");
+    // console.log("reset button has been pressed!");
+    clearInterval(interval);
+    interval = null;
+    timerRunning = false;
+    timer = [0, 0, 0, 0];
+
+    testArea.value = "";
+    theTimer.innerHTML = "00:00:00";
+    testWrapper.style.borderColor = "grey";
 }
 
 // Event listeners for keyboard input and the reset
