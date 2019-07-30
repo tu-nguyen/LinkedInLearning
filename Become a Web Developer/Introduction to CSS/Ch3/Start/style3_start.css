@@ -1,2 +1,22 @@
 /* Add your styles below this */
 
+.wrapper {
+    width: 70%;
+}
+
+/* solution had the classes instead*/
+
+header, 
+footer {
+    background-color: purple;
+    color: white;
+    padding: 30px;
+}
+
+.content {
+    border: 1px solid black;
+    padding: 30px;
+    /* solution was margin: 10x 0*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
