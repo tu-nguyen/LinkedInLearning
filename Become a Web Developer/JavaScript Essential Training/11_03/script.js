@@ -4,8 +4,9 @@ const originText = document.querySelector("#origin-text p").innerHTML;
 const resetButton = document.querySelector("#reset");
 const theTimer = document.querySelector(".timer");
 
-var timer = [0,0,0,0];
+var timer = [0, 0, 0, 0];
 var interval;
+var timerRunning = false;
 
 
 // Add leading zero to numbers 9 or below (purely for aesthetics):
@@ -22,8 +23,8 @@ function runTimer() {
     theTimer.innerHTML = currentTime;
     timer[3]++;
 
-    timer[0] = Math.floor((timer[3]/100)/60);
-    timer[1] = Math.floor((timer[3]/100) - (timer[0] * 60));
+    timer[0] = Math.floor((timer[3] / 100) / 60);
+    timer[1] = Math.floor((timer[3] / 100) - (timer[0] * 60));
     timer[2] = Math.floor(timer[3] - (timer[1] * 100) - (timer[0] * 6000));
 
 }
@@ -32,10 +33,11 @@ function runTimer() {
 function spellCheck() {
     let textEntered = testArea.value;
     console.log("Text entered: ", textEntered);
-    let originTextMatch = originText.substring(0,textEntered.length);
+    let originTextMatch = originText.substring(0, textEntered.length);
 
     if (textEntered == originText) {
-        clearInterval(interval);
+        console.info("Interval stopped: ", interval);
+        // clearInterval(interval);
         testWrapper.style.borderColor = "#429890";
     } else {
         if (textEntered == originTextMatch) {
@@ -47,12 +49,18 @@ function spellCheck() {
 
 }
 
+let test = 0;
 // Start the timer:
 function start() {
     let textEnterdLength = testArea.value.length;
-    if (textEnterdLength === 0) {
-
+    if (textEnterdLength === 0 && !timeRunning) {
+        timeRunning = true;
+        if (test >= 1) {
+            console.error("The start function is triggered!");
+        }
         interval = setInterval(runTimer, 10);
+        test++;
+        console.info(interval);
     }
 }
 
@@ -60,8 +68,8 @@ function start() {
 function reset() {
     clearInterval(interval);
     interval = null;
-    timer = [0,0,0,0];
-
+    timer = [0, 0, 0, 0];
+    timerRunning = false;
 
     testArea.value = "";
     theTimer.innerHTML = "00:00:00";
