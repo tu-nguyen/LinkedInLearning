@@ -1,0 +1,13 @@
+// Gulp.js package.json file example
+// https://docs.npmjs.com/files/package.json
+
+{
+  "name": "my-project-name",
+  "version": "1.0.0",
+  "description": "Learning Gulp",
+
+  "devDependencies": {
+    "gulp": "~3.9.1",
+    "gulp-sass": "latest"
+  }
+}

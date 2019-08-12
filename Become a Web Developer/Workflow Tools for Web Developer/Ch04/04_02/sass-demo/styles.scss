@@ -1,0 +1,20 @@
+/* Variables */
+$primary-color:        #565048;
+$secondary-color:      #664bad;
+$font-family-heading:  'Roboto', sans-serif;
+$font-family-base:     'Sacramento', cursive;
+
+
+/* Global styles */
+body {
+	margin: 0;
+	padding: 0;
+  font-family: $font-family-base;
+  color: $primary-color;
+}
+h1 {
+  margin: 0;
+	font-size: 60px;
+  font-family: $font-family-heading;
+  color: $secondary-color;
+}

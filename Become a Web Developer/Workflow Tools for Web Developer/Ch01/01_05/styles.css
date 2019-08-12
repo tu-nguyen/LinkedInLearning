@@ -1,0 +1,142 @@
+/* GLOBAL STYLES
+-----------------*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+  font: normal 400 24px/1.5 'Roboto', sans-serif;
+  background: linear-gradient(rgba(0, 203, 255, 0.1), rgba(0, 203, 255, 0.1)), url('images/background-1.jpg') no-repeat fixed bottom right;
+  background-size: cover;
+}
+h1 {
+  margin: 0;
+	font-size: 60px;
+  font-family: 'Sacramento', cursive;
+}
+h2 {
+  font-weight: 400;
+  margin: 5px 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-bottom: 1px solid;
+}
+section {
+	padding: 60px 0;
+}
+.content-wrapper {
+  width: 78%;
+  max-width: 950px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+
+/* HEADER
+----------*/
+header {
+  text-align: center;
+}
+header img {
+  max-width: 500px;
+  width: 60%;
+}
+
+
+/* ABOUT SECTION
+-----------------*/
+.about {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+
+/* CONTACT SECTION
+-------------------*/
+.contact {
+	background: #262626;
+}
+.contact h2 {
+  color: #efefef;
+}
+.contact .fa {
+  background: #efefef;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 25px;
+	margin: 30px 10px 45px 0;
+}
+
+
+/* SUBSCRIBE POPUP
+-------------------*/
+.subscribe {
+  position: fixed;
+  top: 25%;
+  left: -400px;
+  width: 400px;
+  /*animation: 1s 3s 1 forwards slide-in;*/
+  background: white;
+  padding: 30px;
+}
+button {
+  background: #222;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  color: #eee;
+  text-transform: uppercase;
+}
+.fa-times {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+@keyframes slide-in {
+  100% {
+    left: 50%;
+    margin-left: -200px;
+  }
+}
+
+
+/* MEDIA QUERIES
+-----------------*/
+@media (min-width: 940px) {
+  body {
+    /*border-top: 4px solid red;*/
+  }
+  header {
+  	padding: 80px 150px;
+  }
+}
+
+@media (max-width: 939px) {
+  body {
+    /*border-top: 4px solid green;*/
+  }
+  header {
+  	padding: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    /*border-top: 4px solid blue;*/
+    font-size: 16px;
+  }
+  header {
+  	padding: 20px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+}
