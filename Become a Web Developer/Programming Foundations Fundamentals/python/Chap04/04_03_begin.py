@@ -1,4 +1,4 @@
-plant = "Cacti"
+plant = "Irises"
 
 if plant == "Cacti":
     print(plant, "don't need a lot of water")
