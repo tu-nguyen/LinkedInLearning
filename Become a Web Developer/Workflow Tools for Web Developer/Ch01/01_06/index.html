@@ -54,9 +54,10 @@
 
 		<script type="text/javascript">
       // Closes the "Subscribe" popup
-      var close = document.querySelector('close');
+      var close = document.querySelector('#close'); // if 'close' it would look for an element instead of id
       close.onclick = function() {
-				this.parentNode.style.display = 'none';
+		  // console.log("It works!");
+		  this.parentNode.style.display = 'none';
       }
     </script>
 	</body>
