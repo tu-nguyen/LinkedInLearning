@@ -5,4 +5,5 @@ import platform
 
 version = platform.python_version()
 
-print('This is python version {}'.format(version))
+print('This is python version {}'.format(version)) ; print("hello")
+# using ; is uncommon, more likely will see one statement per line
