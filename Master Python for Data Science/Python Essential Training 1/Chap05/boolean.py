@@ -6,7 +6,10 @@ b = False
 x = ( 'bear', 'bunny', 'tree', 'sky', 'rain' )
 y = 'bear'
 
-if a and b:
+if y is not x[0]:
     print('expression is true')
 else:
     print('expression is false')
+
+# print(id(y))
+# print(id(x[0]))
