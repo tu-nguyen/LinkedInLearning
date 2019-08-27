@@ -17,17 +17,11 @@
 # all function returns a value, if none is stated, it returns None
    
 def main():
- 
-    x = 5
-    print(id(x))
-    kitten(x)
-    print(f"In main x is {x}")
+    x = kitten()
+    print(type(x), x)
 
-def kitten(a):
-    print(id(a))
-    a = 3
-    print(id(a))
+def kitten():
     print('Meow.')
-    print(a)
+
 
 if __name__ == '__main__': main()
